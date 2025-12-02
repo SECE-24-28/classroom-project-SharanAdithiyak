@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title> Web Layout 4 </title>
+<meta charset="UTF-8">
+<style>
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+font-family:arial
+}
+#parent1{
+width:100%;
+min-height:40px;
+display:flex;
+background-color:lightgrey;
+gap:1000px;
+}
+.child{
+min-height:40px;
+line-height:40px;
+padding:10px;
+}
+.parent{
+margin-top:10px;
+width:100%;
+min-height:115px;
+display:flex;
+gap:10px;
+}
+.childbox{
+width:40%;
+background-color:lightgrey;
+}
+#foot{
+margin-top:10px;
+background-color:lightgrey;
+text-align:center;
+min-height:50px;
+line-height:50px;
+}
+#maindiv{
+width:80%;
+margin:auto
+}
+#parent2{
+width:100%;
+min-height:90px;
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+.box{
+width:40%;
+background-color:lightgrey;
+min-height:90px;
+line-height:90px;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<div id="maindiv">
+<div id="parent1">
+<div class="child"> Logo </div>
+<div class="child"> Navigation </div> 
+</div> 
+<div class="parent">
+<div class="childbox"></div>
+<div class="childbox"></div>
+<div class="childbox"></div>
+<div class="childbox"></div>
+</div>
+<div class="parent">
+<div class="childbox"></div>
+<div class="childbox"></div>
+<div class="childbox"></div>
+<div class="childbox"></div>
+</div>
+<div class="parent">
+<div class="childbox"></div>
+<div class="childbox"></div>
+<div class="childbox"></div>
+<div class="childbox"></div>
+</div>
+<div class="parent">
+<div class="childbox"></div>
+<div class="childbox"></div>
+<div class="childbox"></div>
+<div class="childbox"></div>
+</div>
+<div id="parent2"> 
+<div class="box"> Box 1 </div>
+<div class="box"> Box 2 </div>
+<div class="box"> Box 3 </div>
+</div>
+<div id="foot"> Footer </div>
+</div>
+</body>
+</html>
