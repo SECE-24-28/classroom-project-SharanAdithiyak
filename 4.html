@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Layout 4</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .btn{
+	Color : White ;
+	background-color : grey ;
+	padding : 10px 10px;
+	font-family : French script mt;
+	font-size : 20px;
+	transition : background 3s ease , transform 2s ease;
+    }
+
+    .btn:hover{
+	Background : pink;
+	transform : skewY(20deg);	
+    }
+
+    body {
+      	font-family: French script mt;
+	font-size: 30px;
+       	background: #f0f0f0;
+    } 2
+    
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #ddd;
+    }
+
+    .logo {
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+	text-decoration: none;
+	font-weight: bold;
+      	color: #333;
+    }
+
+    .grid-area {
+      	padding: 20px;
+      	display: grid;
+      	grid-template-columns: repeat(5, 1fr);
+      	gap: 10px;
+    }
+
+    .small-box {
+      background: #ccc;
+      height: 70px;
+    }
+
+    .bottom-boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+	text-align :center;
+      padding: 0 20px 20px;
+    }
+
+    .bottom-boxes .box {
+      	background: #ccc;
+	text-align: center;
+      	height: 350px;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 10px 0;
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+        <ul>
+          <li><a href="#"><button class= "btn">Navigation </button></a></li>
+        </ul>
+      </nav>
+    </header>
+	
+
+    <section class="grid-area">
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+      <div class="small-box"></div>
+    </section>
+
+    <section class="bottom-boxes">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </section>
+
+    <footer>
+      Footer
+    </footer>
+</body>
+</html>
