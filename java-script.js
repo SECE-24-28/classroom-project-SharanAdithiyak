@@ -31,7 +31,3 @@ console.log(!(a===b && b<c));
 
 
 
-
-a=[12,34,45]
-result= a.length
-console.log(result)
