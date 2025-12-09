@@ -53,4 +53,4 @@ function Display1(datas){
     )
 }
 
-export default display
+export default display  

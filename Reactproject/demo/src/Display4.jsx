@@ -1,24 +1,3 @@
-/*import Display from "./display"
-
-function App() 
-{
- var  name="demo";
- var val1=23;
- const arr=[12,23,34]
- const person={name:"sharan", gender:'male'}
-  return (
-    <>
-     <h1> welcome</h1>
-     <Display name={name} a={val1} arr={arr} obj={person}/>
-     </>
-  )
-}
-
-export default App  
- */
-
-
-
 import { useEffect, useState } from "react"
  
 
@@ -27,12 +6,14 @@ const Display4=()=>{
         name:"nandhini",
         gender:"female",
         mobile:12222222
-    })
-     
+    }) 
+     console.log("the current state: ",student)
     function updateName(){
-        setStudent( {name:"demo"})
-           
-         
+        // setStudent( {name:"demo"})
+      setStudent((previousData)=>{
+        console.log("pre data: ..............",previousData)
+return({...previousData,name:"demo",mobile:9585524527})
+      })
     }
     return(
  <>
@@ -47,3 +28,4 @@ const Display4=()=>{
      
 }
 export default Display4
+
