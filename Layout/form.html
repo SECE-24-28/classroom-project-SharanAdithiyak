@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+            <script type="text/javascript">
+            function validate(){
+                let isnamevalid=true
+                if(document.getElementById("Name").value==="")
+                {
+                    document.getElementById("sName").innerHTML="Enter the name";
+                    document.getElementById("sName").style.color="red"   ;
+                    isnamevalid=false
+                }
+                else
+                {
+                    document.getElementById("sName").innerHTML="yes validate";
+                    document.getElementById("sName").style.color="green"  ;
+                    isnamevalid=true
+                }
+            
+
+                let ispassvalid=true
+                let pass=document.getElementById("password").value
+                if(pass==="")
+                {
+                    document.getElementById("spassword").innerHTML="Enter the password";
+                    document.getElementById("spassword").style.color="red"
+                    ispassvalid=false
+                }
+                else
+                {
+                    document.getElementById("spassword").innerHTML="Password is valid"
+                    document.getElementById("spassword").style.color="green"
+                    ispassvalid=true
+                }
+                
+                
+                let iscpassvalid=true
+                let cpass=document.getElementById("confirmpassword").value;
+                if(cpass==="")
+                {
+                    document.getElementById("sconfirmpassword").innerHTML="Enter the confirm password"
+                    document.getElementById("sconfirmpassword").style.color="red";
+                    iscpassvalid=false
+
+                }
+
+                else if(cpass!=pass)
+                {
+                    document.getElementById("sconfirmpassword").innerHTML="Confirm password is mismatch"
+                    document.getElementById("sconfirmpassword").style.color="red"
+                    iscpassvalid=false
+
+                }
+
+                else{
+                    document.getElementById("sconfirmpassword").innerHTML="Confirm is matched to password"
+                    document.getElementById("sconfirmpassword").style.color="green"
+                    iscpassvalid=true
+                }
+
+
+            
+                let isgendervalid = true;
+                let male = document.getElementById("Male").checked;
+                let female = document.getElementById("Female").checked;
+
+                if (!male && !female)
+                {
+                    document.getElementById("sFemale").innerHTML = "Select gender";
+                    document.getElementById("sFemale").style.color = "red";
+                    isgendervalid = false;
+                } 
+                else 
+                {
+                    document.getElementById("sFemale").innerHTML = "Gender selected";
+                    document.getElementById("sFemale").style.color = "green";
+                    isgendervalid = true;
+                }
+                
+                    let iscoursevalid = true;
+                    let course = document.getElementById("selection").value;
+
+                    if (course === "CHOOSE YOUR COURSE") {
+                        document.getElementById("sselect").innerHTML = "Select any course";
+                        document.getElementById("sselect").style.color = "red";
+                        iscoursevalid = false;
+                    } else {
+                        document.getElementById("sselect").innerHTML = "Course selected";
+                        document.getElementById("sselect").style.color = "green";
+                        iscoursevalid = true;
+                    }
+
+
+                    if (isnamevalid && ispassvalid && iscpassvalid && isgendervalid && iscoursevalid) {
+                        return true;   
+                    } else {
+                        return false; 
+                    }
+
+                return false;
+
+            }
+
+    </script>
+    </head>
+    <body>
+        <form action="" method="get" onsubmit="return validate()">
+            <label>Enter your Name:</label>
+            <input type="text" placeholder="Enter your name" id="Name"><span id="sName"></span><br><br><br>
+            <label>Enter your Password:</label>
+            <input type="password" placeholder="password" id="password"><span id="spassword"></span><br><br><br>
+
+            <label>Enter your Confirm Password:</label>
+            <input type="password" placeholder="confirmpassword" id="confirmpassword"><span id="sconfirmpassword"></span>
+            <br><br><br>
+           
+            <label>Choose your gender:</label>
+            Male <input type="radio" name="gender" id="Male">
+            Female <input type="radio" name="gender" id="Female">
+            <span id="sFemale"></span>
+            <br><br>
+
+            <select id="selection">
+                <option>CHOOSE YOUR COURSE</option>
+                <option value="c">C language</option>
+                <option value="jfs">Java Full Stack</option>
+                <option value="mern">MERN stack</option>
+            </select>
+            <span id="sselect"></span>
+            <br><br>
+
+
+            <input type ="submit" placeholder="Submit" id="submit" value="click"><br><br><br>
+
+
+        </form>
+    </body>
+    </html>

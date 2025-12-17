@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome {{message}}</h1>
+    <h2>Add Books</h2>
+    <form action="/store_book" method="POST">
+        title:
+        <input type="text" name="title">
+        author:
+        <input type="text" name="author"><br>
+        <br><button type="submit">Add Book</button>    
+    </form>
+    <ul>
+        {{#each mydata}}
+           <h2><li>{{this.title}} - {{this.author}}</h2>
+           <a href="/edit/{{this._id}}">Edit</a>
+            <a href="/delete/{{this._id}}" onclick="return confirm('Are u sure?')">Delete</a>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html> 
+

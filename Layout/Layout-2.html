@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style type ="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+            font-family:arial;
+            font-size: 22px;
+         } 
+         
+         #topbardiv{
+            margin-top: 10px;
+            display : flex;
+            flex-direction: row;
+            justify-content : space-between;
+            padding: 20px;
+            background-color: grey;
+            color: white;
+            margin-bottom: 10px;
+         }
+        #logodiv,#navidiv{
+            width:400%;
+            background-color:grey;
+            color:white;
+            line-height: 40px;
+            min-height: 40px;
+            margin-bottom: 10px ;
+            font-weight : bold;
+            padding-left: 50px;
+        }  
+        #Headerdiv{
+            width : 100%;
+            background-color : grey;
+            line-height: 100px;
+            min-height : 100px;
+            color:white;
+            text-align:center;
+            margin-bottom : 10px;
+            font-weight: bold;
+            height: auto;
+        }
+        #textdiv{
+            width :100%;
+            background-color: grey;
+            color: white;
+            line-height: 100px;
+            min-height: 100px;
+            margin-bottom:10px;
+            text-align:center;
+            font-weight:bold;
+        }
+        #parent{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 10px;
+            gap: 50px;
+            justify-content: space-between;
+        }
+        #box1div,#box2div,#box3div{
+            width: 100%;
+            background-color: grey;
+            color: white;
+            min-height: 300px;
+            line-height: 300px;
+            height: 340px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #footerdiv{
+            width: 100%;
+            background-color: grey;
+            color: white;
+            line-height: 40px;
+            min-height: 40px;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #maindiv{
+            width: 60%;
+            margin: auto;
+        }
+
+        
+        </style>
+        </head>
+        <body>
+            <div id = "maindiv">
+            <div id ="topbardiv">
+            <div id = "logodiv">Logo </div>
+            <div id ="navidiv">Navigation</div>
+            </div>
+            <div id = "Headerdiv">Header / Banner</div>
+            <div id ="textdiv">Into Text Area</div>
+            <div id = parent>
+                <div id = "box1div">Box 1</div>
+                <div id = "box2div">Box 2</div>
+                <div id = "box3div">Box 3</div>
+            </div>
+            <div id = "footerdiv"> Footer</div>
+            </div>
+        </body>
+</html>
